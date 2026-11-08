@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoTracker - نظام تحديد الموقع الجغرافي</title>
+    
+    <!-- ملف CSS الخاص بالخريطة Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- ملف الاستايل الخاص بك -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">GeoTracker</h1>
+        <p class="subtitle">نظام تحديد الموقع الجغرافي</p>
+    </header>
+
+    <main class="container">
+        <!-- بطاقة معلومات الاتصال -->
+        <section class="card">
+            <h2>معلومات الاتصال</h2>
+            <div class="info-group">
+                <p>عنوان IP: <span id="ip-address" class="highlight">جاري التحميل...</span></p>
+                <p>الدولة: <span id="country" class="highlight">---</span></p>
+                <p>المدينة: <span id="city" class="highlight">---</span></p>
+            </div>
+        </section>
+
+        <!-- بطاقة تحديد موقع GPS -->
+        <section class="card">
+            <h2>تحديد موقع GPS</h2>
+            <p class="description">اضغط على الزر للسماح بتحديد موقع جهازك.</p>
+            
+            <button id="locate-btn" class="btn">تحديد موقعي</button>
+            
+            <div class="info-group">
+                <p>خط العرض: <span id="latitude" class="highlight">---</span></p>
+                <p>خط الطول: <span id="longitude" class="highlight">---</span></p>
+            </div>
+        </section>
+
+        <!-- بطاقة الخريطة التفاعلية -->
+        <section class="card">
+            <h2>الخريطة التفاعلية</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <!-- ملف JS الخاص بالخريطة Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- ملف الجافاسكريبت الخاص بك -->
+    <script src="script.js"></script>
+</body>
+</html>
